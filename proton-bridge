@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+exec `dirname ${0}`/../libexec/proton-bridge/bridge \
+  --cli \
+  --noninteractive \
+  "$@"

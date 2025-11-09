@@ -35,7 +35,7 @@ jobs:
       - name: Install RPM build tools
         run: |
           dnf -q --refresh makecache -y
-          dnf -q --setopt='install_weak_deps=False' install -y findutils @"RPM Development Tools"
+          dnf -q --setopt='install_weak_deps=False' install -y findutils @"RPM Development Tools" dnf-plugins-core
 
       - name: Set up RPM build environment
         run: |
@@ -56,6 +56,10 @@ jobs:
 
           chmod +x proton-bridge
           find . -mindepth 1 -maxdepth 1 -type f -executable
+
+      - name: Install build dependencies
+        run: |
+          dnf build-dep -y ~/rpmbuild/SPECS/proton-bridge.spec
 
       - name: Build RPM
         run: |
