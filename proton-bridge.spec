@@ -1,6 +1,6 @@
 Name:  proton-bridge
 Version: 3.21.2
-Release: 1%{dist}
+Release: 2%{dist}
 Summary: Proton Mail Bridge application
 
 License: GPL-3
@@ -12,6 +12,21 @@ BuildRequires: golang
 BuildRequires: gcc
 BuildRequires: make
 BuildRequires: libsecret-devel
+
+Requires: gnutls
+Requires: libffi
+Requires: glib2
+Requires: pcre2
+Requires: libunistring
+Requires: libsecret
+Requires: libtasn1
+Requires: libidn2
+Requires: p11-kit
+Requires: libblkid
+Requires: libmount
+Requires: zlib-ng-compat
+
+Recommends: gnome-keyring
 
 %description
 Proton Mail Bridge for e-mail clients.
@@ -40,5 +55,8 @@ Proton Mail Bridge for e-mail clients.
 
 
 %changelog
+* Sun Nov 09 2025 KOSHIKAWA Kenichi <reishoku.misc@pm.me> - 3.21.2-2
+- Modify package dependencies
+
 * Sun Nov 09 2025 KOSHIKAWA Kenichi <reishoku.misc@pm.me> - 3.21.2-1
 - Initial packaging for proton-bridge
