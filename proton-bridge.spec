@@ -3,7 +3,7 @@ Version: 3.21.2
 Release: 2%{dist}
 Summary: Proton Mail Bridge application
 
-License: GPL-3
+License: GPL-3.0-only
 URL: https://github.com/ProtonMail/proton-bridge
 Source0: %{url}/archive/refs/tags/v%{version}.tar.gz
 Source10: ./proton-bridge
