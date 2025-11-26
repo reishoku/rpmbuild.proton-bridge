@@ -9,4 +9,4 @@ updates:
       all:
         patterns:
           - github.com/ProtonMail/proton-bridge/v3
-    open-pull-request-limit: 1
+    open-pull-requests-limit: 1
