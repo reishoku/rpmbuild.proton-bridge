@@ -1,0 +1,12 @@
+version: 2
+updates:
+  - package-ecosystem: "gomod"
+    directory: "/"
+    schedule:
+      timezone: "Asia/Tokyo"
+      interval: "daily"
+    groups:
+      all:
+        patterns:
+          - github.com/ProtonMail/proton-bridge/v3
+    open-pull-request-limit: 1
