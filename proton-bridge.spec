@@ -36,7 +36,7 @@ Proton Mail Bridge for e-mail clients.
 
 
 %build
-%make_build build-nogui
+%make_build PROTONMAIL_ENV=dev build-nogui
 
 
 %install
