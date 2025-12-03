@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+export PROTONMAIL_ENV="dev"
+
 exec `dirname ${0}`/../libexec/proton-bridge/bridge \
   --cli \
   --noninteractive \
